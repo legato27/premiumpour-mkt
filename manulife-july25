@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Manulife Employee Offer - Premium Pour</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f8f8f6;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        .top-nav {
+            background: #f8f8f6;
+            padding: 15px 30px;
+            text-align: center;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .social-icon {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .nav-links {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .nav-links a {
+            color: #2c2c2c;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #666;
+        }
+        .header {
+            background: linear-gradient(135deg, #808080 0%, #333333 100%);
+            color: #f8f8f6;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 Q50,5 80,20 Q95,50 80,80 Q50,95 20,80 Q5,50 20,20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>') repeat;
+            opacity: 0.6;
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 15px;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            color: #f8f8f6;
+        }
+        .tagline {
+            font-size: 14px;
+            opacity: 0.85;
+            font-style: italic;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .exclusive-badge {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #f8f8f6;
+            padding: 8px 24px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .main-content {
+            padding: 50px 40px;
+        }
+        .japanese-quote {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            margin: 0 0 40px 0;
+            padding: 30px 20px;
+            font-size: 16px;
+            border-top: 1px solid #e8e8e8;
+            border-bottom: 1px solid #e8e8e8;
+            background: #fafafa;
+        }
+        .discount-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 40px 30px;
+            background: #2c2c2c;
+            color: #f8f8f6;
+        }
+        .discount-number {
+            font-size: 60px;
+            font-weight: normal;
+            margin: 0;
+            letter-spacing: 4px;
+        }
+        .discount-text {
+            font-size: 16px;
+            margin: 15px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .promo-code-container {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+        .promo-code {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 6px;
+            color: #f8f8f6;
+        }
+        .featured-title {
+            text-align: center;
+            font-size: 24px;
+            margin: 50px 0 40px 0;
+            color: #2c2c2c;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        .product-showcase {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .product-item {
+            flex: 1;
+            min-width: 240px;
+            text-align: center;
+            padding: 30px 20px;
+            background: #fafafa;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+        .product-item:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+        }
+        .product-name {
+            font-size: 16px;
+            margin: 20px 0 15px 0;
+            color: #2c2c2c;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        .product-description {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .price-display {
+            margin: 20px 0;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+        .sale-price {
+            color: #2c2c2c;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .benefits-section {
+            margin: 50px 0;
+            padding: 40px 30px;
+            background: #fafafa;
+            border-left: 4px solid #2c2c2c;
+        }
+        .benefits-title {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #2c2c2c;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+        }
+        .benefit-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .benefit-item:last-child {
+            border-bottom: none;
+        }
+        .benefit-title {
+            font-weight: bold;
+            color: #2c2c2c;
+            margin-bottom: 5px;
+        }
+        .benefit-desc {
+            color: #666;
+            font-size: 14px;
+        }
+        .cta-section {
+            text-align: center;
+            margin: 50px 0;
+            padding: 40px 30px;
+            background: #2c2c2c;
+            color: #f8f8f6;
+        }
+        .cta-title {
+            font-size: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        .cta-button {
+            background: transparent;
+            color: #f8f8f6;
+            padding: 15px 40px;
+            border: 2px solid #f8f8f6;
+            font-size: 14px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #f8f8f6;
+            color: #2c2c2c;
+        }
+        .deadline-notice {
+            background: #f0f0f0;
+            border-left: 4px solid #2c2c2c;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .deadline-title {
+            font-weight: bold;
+            color: #2c2c2c;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .redemption-steps {
+            background: #fafafa;
+            padding: 40px 30px;
+            margin: 40px 0;
+            border: 1px solid #e8e8e8;
+        }
+        .steps-title {
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #2c2c2c;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        .steps-list {
+            list-style: none;
+            padding: 0;
+        }
+        .step-item {
+            padding: 12px 0;
+            color: #2c2c2c;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .step-item:last-child {
+            border-bottom: none;
+        }
+        .step-number {
+            font-weight: bold;
+            margin-right: 10px;
+            color: #2c2c2c;
+        }
+        .footer {
+            background: #2c2c2c;
+            color: #f8f8f6;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .footer-quote {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+        .footer-tagline {
+            margin: 15px 0;
+            opacity: 0.8;
+            letter-spacing: 1px;
+        }
+        .footer-links {
+            margin: 30px 0;
+        }
+        .footer-links a {
+            color: #f8f8f6;
+            text-decoration: none;
+            margin: 0 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 12px;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+        .footer-links a:hover {
+            border-bottom: 1px solid #f8f8f6;
+        }
+        .footer-disclaimer {
+            font-size: 11px;
+            opacity: 0.7;
+            margin-top: 30px;
+            line-height: 1.4;
+        }
+        .divider {
+            height: 1px;
+            background: #e8e8e8;
+            margin: 40px 0;
+        }
+        @media (max-width: 600px) {
+            .product-showcase {
+                flex-direction: column;
+            }
+            .main-content {
+                padding: 30px 20px;
+            }
+            .discount-number {
+                font-size: 48px;
+            }
+            .logo {
+                font-size: 24px;
+                letter-spacing: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <div class="nav-links">
+                <a href="https://premiumpour.sg/">🌐 Visit Website</a>
+                <a href="https://premiumpour.sg/pages/contact">📧 Contact Us</a>
+            </div>
+
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <!-- Premium Pour Logo -->
+                <img src="https://premiumpour.sg/cdn/shop/files/PPLogo.png?v=1730816377&width=130" 
+                     alt="Premium Pour - Authentic Japanese Sake & Liqueurs" 
+                     style="display: block; max-height: 60px; margin: 0 auto 15px auto;" 
+                     width="120" height="60" />
+                <!-- Fallback text logo in case image doesn't load -->
+                <div class="logo" style="display: none;">Premium Pour</div>
+                <div class="tagline">Authentic Japanese Sake & Liqueurs</div>
+                <div class="exclusive-badge">Exclusive Manulife Offer</div>
+            </div>
+            
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Japanese Quote -->
+            <div class="japanese-quote">
+                "Silent whispers of ancient lands, sake flows like memories, echoing the heart of Japan." - Premium Pour 2025
+    
+            </div>
+
+            <!-- Discount Section -->
+            <div class="discount-section">
+                <div class="discount-number">20% OFF</div>
+                <div class="discount-text">All Premium Japanese Beverages</div>
+                <div class="discount-text">Valid Until October 31, 2025</div>
+                <div class="promo-code-container">
+                    <div class="promo-code">MSGJUL25</div>
+
+                    
+                </div>
+            </div>
+
+                    <div class="japanese-quote">
+            Follow us on our journey to bring you the finest Japanese beverages, crafted with passion and tradition.
+             <div class="social-links">
+                <a href="https://www.instagram.com/premiump.sg/">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="social-icon" style="filter: brightness(0);">
+                    Instagram
+                </a>
+                <a href="https://www.tiktok.com/@premium.pour">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok" class="social-icon" style="filter: brightness(0);">
+                    TikTok
+                </a>
+            </div>
+            </div>
+            <!-- Featured Products -->
+            <div class="featured-title">Featured Collection</div>
+            
+            <div class="product-showcase">
+                <div class="product-item">
+                    <!-- Replace 'YOUR_SAKE_IMAGE_URL' with actual product image -->
+                    <img src="https://premiumpour.sg/cdn/shop/files/Sake_Daiajinjo_35_Zuiun_Image.png?v=1730638727&width=713" alt="Laugh with SAKE Daiginjo 35 Zuiun" style="width: 100%; max-width: 200px; height: 200px; object-fit: cover; object-position: 50% 75%; margin-bottom: 15px;" />
+                    <div class="product-name">Laugh with SAKE<br>Daiginjo 35 Zuiun</div>
+                    <div class="product-description">Exceptional craftsmanship for special occasions</div>
+                    <div class="price-display">
+                        <span class="original-price">$100.00</span>
+                        <span class="sale-price">$80.00</span>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <!-- Replace 'YOUR_BANKAN_IMAGE_URL' with actual product image -->
+                    <img src="https://premiumpour.sg/cdn/shop/files/Kuramono_no_Bankan_Image.jpg?v=1730638625&width=713" alt="Bankan Liqueur Kuramoto no Bankan" style="width: 100%; max-width: 200px; height: 200px; object-fit: cover; margin-bottom: 15px;" />
+                    <div class="product-name">Bankan Liqueur<br>Kuramoto no Bankan</div>
+                    <div class="product-description">Rich traditional fruit liqueur</div>
+                    <div class="price-display">
+                        <span class="original-price">$38.00</span>
+                        <span class="sale-price">$30.40</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-showcase">
+                <div class="product-item">
+                    <!-- Replace 'YOUR_MIKAN_IMAGE_URL' with actual product image -->
+                    <img src="https://premiumpour.sg/cdn/shop/files/Kuramoto_no_Mikan_Image.jpg?v=1730638701&width=713" alt="Mandarin Orange Liqueur Kuramoto no Mikan" style="width: 100%; max-width: 200px; height: 200px; object-fit: cover; margin-bottom: 15px;" />
+                    <div class="product-name">Mandarin Orange Liqueur<br>Kuramoto no Mikan</div>
+                    <div class="product-description">Aromatic citrus perfection</div>
+                    <div class="price-display">
+                        <span class="original-price">$38.00</span>
+                        <span class="sale-price">$30.40</span>
+                    </div>
+                </div>
+                
+                <div class="product-item">
+                    <!-- Replace 'YOUR_YUZU_IMAGE_URL' with actual product image -->
+                    <img src="https://premiumpour.sg/cdn/shop/files/YuzuLiqueurKuramotonoYuzu.jpg?v=1730119560&width=713" alt="Yuzu Liqueur Kuramoto no Yuzu" style="width: 100%; max-width: 200px; height: 200px; object-fit: cover; margin-bottom: 15px;" />
+                    <div class="product-name">Yuzu Liqueur<br>Kuramoto no Yuzu</div>
+                    <div class="product-description">Fresh Japanese citrus essence</div>
+                    <div class="price-display">
+                        <span class="original-price">From $22.00</span>
+                        <span class="sale-price">From $17.60</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Benefits Section -->
+            <div class="benefits-section">
+                <div class="benefits-title">Why Choose Premium Pour</div>
+                
+                <ul class="benefit-list">
+                    <li class="benefit-item">
+                        <div class="benefit-title">🍶 Authentic Japanese Craftsmanship</div>
+                        <div class="benefit-desc">Direct from traditional breweries with centuries of expertise</div>
+                    </li>
+                    <li class="benefit-item">
+                        <div class="benefit-title">🎌 Curated Excellence</div>
+                        <div class="benefit-desc">Hand-picked selection of premium sake and artisanal liqueurs</div>
+                    </li>
+                    <li class="benefit-item">
+                        <div class="benefit-title">🥂 Perfect for Any Occasion</div>
+                        <div class="benefit-desc">From celebrations to quiet evenings - discover your perfect moment</div>
+                    </li>
+                    <li class="benefit-item">
+                        <div class="benefit-title">🚚 Singapore Delivery</div>
+                        <div class="benefit-desc">Authentic Japanese flavors delivered straight to your door</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <div class="cta-title">Experience Japanese Excellence</div>
+                <p>Browse our curated collection and apply your exclusive discount at checkout</p>
+                <a href="https://premiumpour.sg/" class="cta-button">Explore Collection</a>
+            </div>
+
+            <!-- Deadline Notice -->
+            <div class="deadline-notice">
+                <div class="deadline-title">Limited Time Offer</div>
+                <div>This exclusive 20% discount expires October 31, 2025<br>
+                Don't miss your chance to experience authentic Japanese craftsmanship</div>
+            </div>
+
+            <!-- Redemption Steps -->
+            <div class="redemption-steps">
+                <div class="steps-title">How to Redeem Your Discount</div>
+                <ol class="steps-list">
+                    <li class="step-item"><span class="step-number">1.</span>Visit premiumpour.sg</li>
+                    <li class="step-item"><span class="step-number">2.</span>Browse our premium Japanese collection</li>
+                    <li class="step-item"><span class="step-number">3.</span>Enter promo code MSGJUL25 at checkout</li>
+                    <li class="step-item"><span class="step-number">4.</span>Enjoy 20% off your entire order</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-quote">Kampai!</div>
+            <div class="footer-tagline">Experience the tradition, taste the craftsmanship</div>
+            
+            <div class="footer-links">
+                <a href="https://premiumpour.sg/">🌐 Visit Website</a>
+                <a href="https://premiumpour.sg/pages/contact">📧 Contact Us</a>
+                <a href="https://www.instagram.com/premiump.sg/">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" class="social-icon" style="filter: brightness(0) invert(1);">
+                    Instagram
+                </a>
+                <a href="https://www.tiktok.com/@premium.pour">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tiktok.svg" alt="TikTok" class="social-icon" style="filter: brightness(0) invert(1);">
+                    TikTok
+                </a>
+            </div>
+            
+            <div class="footer-disclaimer">
+                This exclusive offer is available to Manulife Singapore employees only.<br>
+                Valid until October 31, 2025. Cannot be combined with other promotions.<br><br>
+                Embracing the essence of Japanese tradition, we craft products that honor<br>
+                our brewery's heritage with a blend of black, white, and woody aesthetics.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
